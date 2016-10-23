@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+        
+<hibernate-mapping package="com.vinod">
+    <class name="Person" table="person3">
+        <id name="id"/>
+        <property name="firstName"/>
+        <property name="lastName"/>
+    <joined-subclass name="Employee" table="Employee3">
+    	<key column="id"/>
+        <property name="email"/>
+        <property name="address"/>
+	    <joined-subclass name="PermanentEmployee" table="perm_employee3">
+	        <key column="id"/>
+	        <property name="salary"/>
+	        <property name="designation"/>
+	    </joined-subclass>
+	</joined-subclass>
+	</class>
+</hibernate-mapping>

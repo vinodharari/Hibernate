@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+        
+<hibernate-mapping package="com.vinod">
+    <class name="Person" table="personPK">
+        <composite-id name="personPk" class="PersonPK">
+        	<key-property name="firstName" column="first_name"/>
+        	<key-property name="email"/>
+        </composite-id>
+        <property name="lastName" column="last_name"/>
+        <property name="age"/>
+        <property name="address"/>
+    </class> 
+    <sql-query name="q1">select * from person</sql-query>
+    <sql-query name="q2">select * from person where age &gt;24</sql-query>
+</hibernate-mapping>

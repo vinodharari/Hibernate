@@ -1,0 +1,7 @@
+5,swetha,btm,BE,21,45000
+6,bharat,maratha halli,BE,45,35000
+7,manu,btm,MCA,37,25000
+8,bhanu,btm,BE,25,28000
+9,swathi,maratha halli,MCA,26,48000
+10,kiran,btm,MCA,24,28000
+11,vijay,koramangala,BE,32,22000
